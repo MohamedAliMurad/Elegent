@@ -11,10 +11,10 @@ const Layout: React.FC = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex w-full h-screen h-full layout-container">
+    <div className="flex  ">
       <Sidebar handleSidebarToggle={handleSidebarToggle} isOpen={isOpen}  />
-      <div className="w-full flex flex-col align-center">
-        <Header handleSidebarToggle={handleSidebarToggle} />
+      <div className="w-full min-h-screen flex flex-col align-center">
+        <Header handleSidebarToggle={handleSidebarToggle}  />
         <div className="w-full ">
           <Outlet />
         </div>

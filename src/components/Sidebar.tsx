@@ -31,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
     <>
       {/* Sidebar */}
       <aside
-        className={`fixed h-70 bg-white transition-transform transform m-7 rounded-3xl p-4 ${
+        className={`fixed  bg-white transition-transform transform m-7 rounded-3xl p-2 flex flex-col  ${
           isOpen ? "translate-x-0" : "-translate-x-full hidden lg:block 2xl:block "
         } lg:translate-x-0 lg:relative w-60 lg:w-72 2xl:w-80 shadow-lg lg:shadow-none`}
       >
@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
           <h1 className="text-2xl font-semibold text-gray-800">Elegant</h1>
         </div>
 
-        <nav className="flex-1 justify-between">
+        <nav className="justify-between mb-10">
           <ul>
             <li
               className={`py-2 flex justify-between items-center cursor-pointer px-2 rounded-t-2xl border-b border-[#fff] ${
@@ -111,7 +111,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
             </li>
             {isActive("pages") && (
               <ul className="pl-6 space-y-1 bg-[#FF8E29] text-white px-2 rounded-b-2xl">
-                <li className="py-1 cursor-pointer">
+                <li className="py-1 cursor-pointer flex justify-between">
                   <Link
                     to="/profile"
                     className="text-gray-500 hover:text-gray-800"
@@ -138,7 +138,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
                     </Link>
                   </li>
                 </ul>
-                <li className="py-1 cursor-pointer">
+                <li className="py-1 cursor-pointer flex justify-between">
                   <Link
                     to="/pages/users"
                     className="text-gray-500 hover:text-gray-800"
@@ -147,7 +147,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
                   </Link>
                   <FiChevronDown className="ml-2" size={20} color="#808080" />
                 </li>
-                <li className="py-1 cursor-pointer">
+                <li className="py-1 cursor-pointer flex justify-between">
                   <Link
                     to="/pages/account"
                     className="text-gray-500 hover:text-gray-800"
@@ -156,7 +156,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
                   </Link>
                   <FiChevronDown className="ml-2" size={20} color="#808080" />
                 </li>
-                <li className="py-1 cursor-pointer">
+                <li className="py-1 cursor-pointer flex justify-between">
                   <Link
                     to="/pages/projects"
                     className="text-gray-500 hover:text-gray-800"
@@ -347,9 +347,9 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
           </ul>
         </nav>
 
-        <div className="flex items-center justify-center ">
-          <div className="text-[#FF8E29]  py-2 rounded-full">Logout</div>
-          <FiLogOut className="ml-2" size={20} color="#FF8E29" />
+        <div className="flex items-center justify-center  mt-20">
+          <div className="text-[#FF8E29]  py-2 rounded-full cursor-pointer">Logout</div>
+          <FiLogOut className="ml-2 cursor-pointer" size={20} color="#FF8E29" />
         </div>
       </aside>
     </>
