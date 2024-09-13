@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
-import "../styles/layout.css";
 
 const Layout: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
