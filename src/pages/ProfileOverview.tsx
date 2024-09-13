@@ -6,7 +6,6 @@ import {
   FaLinkedin,
   FaMessage,
 } from "react-icons/fa6";
-import { RiAddBoxFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -14,13 +13,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import {
-  Avatar,
-  AvatarGroup,
-  FormControlLabel,
-  FormGroup,
-  Switch,
-} from "@mui/material";
+import { Avatar, AvatarGroup, Switch } from "@mui/material";
 
 interface CardProps {
   title: string;
@@ -213,7 +206,7 @@ const ProfileOverview: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between gap-4 flex-wrap">
           {cardsData.map((card, index) => (
             <div
-              className="w-full md:w-[48%] lg:w-[23%] xl:w-[23%]"
+              className="w-full md:w-[48%] lg:w-[30%] xl:w-[23%] rounded-3xl overflow-hidden shadow-lg"
               key={index}
             >
               <Card sx={{ width: "100%" }}>
@@ -233,15 +226,22 @@ const ProfileOverview: React.FC = () => {
                     {card.content}
                   </Typography>
                 </CardContent>
-                <CardActions sx={{ justifyContent: "space-between" }}>
-                  <AvatarGroup total={4}>
+                <CardActions
+                  sx={{ display: "flex", justifyContent: "space-around" }}
+                >
+                  <AvatarGroup style={{ minWidth: 100 }} max={4} total={4}>
                     {card.avatars.map((avatar, i) => (
-                      <Avatar key={i} alt={`Avatar ${i}`} src={avatar} />
+                      <Avatar
+                        sx={{ width: 35, height: 35 }}
+                        key={i}
+                        alt={`Avatar ${i}`}
+                        src={avatar}
+                      />
                     ))}
                   </AvatarGroup>
-                  <Button size="small" sx={{ color: "#FF8E29" }}>
+                  <div className="text-[#FF8E29] font-semibold cursor-pointer">
                     View project
-                  </Button>
+                  </div>
                 </CardActions>
               </Card>
             </div>
