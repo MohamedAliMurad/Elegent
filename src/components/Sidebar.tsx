@@ -29,11 +29,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
     <>
       {/* Sidebar */}
       <aside
-        className={`fixed  bg-white transition-transform transform m-7 rounded-3xl p-2 flex flex-col  ${
-          isOpen
-            ? "translate-x-0"
-            : "-translate-x-full hidden lg:block 2xl:block "
-        } lg:translate-x-0 lg:relative w-60 lg:w-72 2xl:w-80 shadow-lg lg:shadow-none`}
+  className={`fixed bg-white transition-transform transform m-7 rounded-3xl p-2 flex flex-col justify-around shadow-lg lg:relative w-60 lg:w-72 2xl:w-80 ${
+    isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0 hidden lg:block"
+  }`}
       >
         {/* Logo */}
         <div className="flex items-center pb-6 my-5 justify-center space-x-2">

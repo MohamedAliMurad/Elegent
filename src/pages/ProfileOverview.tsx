@@ -75,7 +75,7 @@ const ProfileOverview: React.FC = () => {
 
   return (
     <div className="w-full py-4 pb-6 lg:pl-0 xl:pl-0 lg:px-6 xl:px-6 px-4 flex flex-col gap-4">
-      <section className="min-w-full flex lg:flex-row flex-col justify-between bg-white p-4 rounded-3xl self-center ">
+      <section className="min-w-full flex lg:flex-row flex-col justify-between bg-white p-4 rounded-3xl self-center shadow-lg ">
         <div className="user-des lg:w-1/2 xl:w-1/2 w-full flex flex-col gap-5">
           <div className="user flex flex-row gap-5 items-center w-full ">
             <img
@@ -130,8 +130,8 @@ const ProfileOverview: React.FC = () => {
           </p>
         </div>
       </section>
-      <section className="min-w-full flex lg:flex-row flex-col justify-between  rounded-3xl self-center gap-4  ">
-        <div className="user-des lg:w-1/3 xl:w-3/2 w-full flex flex-col gap-5 bg-white rounded-3xl p-4">
+      <section className="min-w-full flex lg:flex-row flex-col justify-between  rounded-3xl self-center gap-4   ">
+        <div className="user-des lg:w-1/3 xl:w-3/2 w-full flex flex-col gap-5 bg-white rounded-3xl p-4 shadow-lg">
           <h3 className="text-gray-800 text-lg">Account</h3>
           <div className="flex flex-row gap-5 items-center">
             <Switch color="warning" />
@@ -148,7 +148,7 @@ const ProfileOverview: React.FC = () => {
             <p className="text-gray-800">Email me when someone mention me</p>
           </div>
         </div>
-        <div className="user-des lg:w-1/3 xl:w-3/2 w-full flex flex-col gap-5 bg-white rounded-3xl p-4">
+        <div className="user-des lg:w-1/3 xl:w-3/2 w-full flex flex-col gap-5 bg-white rounded-3xl p-4 shadow-lg">
           <h3 className="text-gray-800 text-lg">Application</h3>
           <div className="flex flex-row gap-5 items-center">
             <Switch defaultChecked color="warning" />
@@ -163,7 +163,7 @@ const ProfileOverview: React.FC = () => {
             <p className="text-gray-800">Subscribe to newsletter</p>
           </div>
         </div>
-        <div className="user-des lg:w-1/3 xl:w-3/2 w-full flex flex-col gap-5 bg-white rounded-3xl p-4">
+        <div className="user-des lg:w-1/3 xl:w-3/2 w-full flex flex-col gap-5 bg-white rounded-3xl p-4 shadow-lg">
           <h3 className="text-gray-800 text-lg">Conversations</h3>
           <div className="flex flex-row gap-5 items-center w-full justify-between">
             <div className="flex flex-row gap-5 items-center">
@@ -199,7 +199,7 @@ const ProfileOverview: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="min-w-full flex flex-col justify-between bg-white p-4 rounded-3xl self-center gap-4">
+      <section className="min-w-full flex flex-col justify-between bg-white p-5 rounded-3xl self-center gap-4 shadow-lg">
         <h2 className="text-gray-800 text-lg font-semibold">Projects</h2>
         <p className="text-gray-500 text-sm">Architects design houses</p>
         <div className="flex flex-col md:flex-row justify-between gap-4 flex-wrap">
