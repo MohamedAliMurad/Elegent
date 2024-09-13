@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiChevronDown, FiChevronUp, FiLogOut, FiMenu } from "react-icons/fi";
+import { FiChevronDown, FiChevronUp, FiLogOut } from "react-icons/fi";
 import { FaShoppingCart, FaLock } from "react-icons/fa";
 import {
   AiFillAppstore,
@@ -10,15 +10,13 @@ import {
   AiFillMessage,
 } from "react-icons/ai";
 import { SiPowerpages } from "react-icons/si";
-import { RiApps2Fill } from "react-icons/ri";
 import "../styles/Sidebar.css";
 
 interface SidebarProps {
-  handleSidebarToggle: () => void;
   isOpen: boolean;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   const toggleMenu = (menu: string) => {
@@ -32,7 +30,9 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
       {/* Sidebar */}
       <aside
         className={`fixed  bg-white transition-transform transform m-7 rounded-3xl p-2 flex flex-col  ${
-          isOpen ? "translate-x-0" : "-translate-x-full hidden lg:block 2xl:block "
+          isOpen
+            ? "translate-x-0"
+            : "-translate-x-full hidden lg:block 2xl:block "
         } lg:translate-x-0 lg:relative w-60 lg:w-72 2xl:w-80 shadow-lg lg:shadow-none`}
       >
         {/* Logo */}
@@ -348,7 +348,9 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
         </nav>
 
         <div className="flex items-center justify-center  mt-20">
-          <div className="text-[#FF8E29]  py-2 rounded-full cursor-pointer">Logout</div>
+          <div className="text-[#FF8E29]  py-2 rounded-full cursor-pointer">
+            Logout
+          </div>
           <FiLogOut className="ml-2 cursor-pointer" size={20} color="#FF8E29" />
         </div>
       </aside>

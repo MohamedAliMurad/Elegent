@@ -1,9 +1,9 @@
 // src/components/Dashboard.tsx
-import React, { useState } from 'react';
-import Sidebar from '../components/Sidebar';
-import Header from '../components/Header';
-import { Outlet } from 'react-router-dom';
-import '../styles/layout.css';
+import React, { useState } from "react";
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
+import { Outlet } from "react-router-dom";
+import "../styles/layout.css";
 
 const Layout: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -12,9 +12,9 @@ const Layout: React.FC = () => {
   };
   return (
     <div className="flex  ">
-      <Sidebar handleSidebarToggle={handleSidebarToggle} isOpen={isOpen}  />
+      <Sidebar isOpen={isOpen} />
       <div className="w-full min-h-screen flex flex-col align-center">
-        <Header handleSidebarToggle={handleSidebarToggle}  />
+        <Header handleSidebarToggle={handleSidebarToggle} />
         <div className="w-full ">
           <Outlet />
         </div>
