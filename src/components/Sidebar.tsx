@@ -124,7 +124,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleSidebarToggle, isOpen }) => {
                   <li className="py-1 cursor-pointer">
                     <Link
                       to="/profile/overview"
-                      className="text-gray-500 hover:text-gray-800"
+                      className="text-gray-100 hover:text-gray-800"
                     >
                       Overview
                     </Link>
