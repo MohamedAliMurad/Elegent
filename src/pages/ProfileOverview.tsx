@@ -119,13 +119,13 @@ const ProfileOverview: React.FC = () => {
           </h1>
           <p className="user-info-social text-gray-500 flex flex-row gap-4 mt-2">
             <Link to="https://www.facebook.com/">
-              <FaFacebook className="text-[#FF8E29] w-7 h-7 " />
+              <FaFacebook className="text-[#FF8E29] w-[25px] h-[25px] " />
             </Link>
             <Link to="https://www.instagram.com/">
-              <FaInstagram className="text-[#FF8E29] w-7 h-7 " />
+              <FaInstagram className="text-[#FF8E29] w-[25px] h-[25px] " />
             </Link>
             <Link to="https://www.linkedin.com/">
-              <FaLinkedin className="text-[#FF8E29] w-7 h-7 " />
+              <FaLinkedin className="text-[#FF8E29] w-[25px] h-[25px]" />
             </Link>
           </p>
         </div>
@@ -231,7 +231,7 @@ const ProfileOverview: React.FC = () => {
                   <AvatarGroup style={{ minWidth: 100 }} max={4} total={4}>
                     {card.avatars.map((avatar, i) => (
                       <Avatar
-                        sx={{ width: 35, height: 35 }}
+                        sx={{ width: 25, height: 25 }}
                         key={i}
                         alt={`Avatar ${i}`}
                         src={avatar}
